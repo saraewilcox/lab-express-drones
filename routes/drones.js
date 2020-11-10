@@ -54,6 +54,7 @@ router.post('/drones/:id/edit', (req, res, next) => {
   // Iteration #4: Update the drone
   // ... your code here
   let id = req.params.id;
+  let { name, propellers, maxSpeed } = req.body;
   Dronemodel.findByIdAndUpdate(id,  {
     name,
     propellers,
